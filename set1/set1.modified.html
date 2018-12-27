@@ -65,8 +65,8 @@ nav a:hover {
 .container {
 	position: relative;
 	margin-left: 8%;
-	display: table;
-	height: 100%;
+	display: flex;
+	flex-direction: row;
 	width: 92%;
 }
 
@@ -75,16 +75,20 @@ nav a:hover {
 }
 
 .column {
-	display: table-cell;
-	vertical-align: top;
-	height: 100%;
 	padding: 5px;
 	width: 25%;
 	font-size:0.8em;
+	overflow-y: auto;
+	overflow-x: initial;
+	max-height: 100vh;
 }
 
 .column:first-of-type {
 	width: 50%;
+	overflow-y: auto;
+}
+.column:last-of-type {
+	display:none;
 }
 
 #download_button {
@@ -100,7 +104,6 @@ ul { margin:0; padding:0; }
 }
 
 @media all and (max-width: 1024px) {
-  .column { width:0%; }
   .column:first-of-type { display:none; }
 }</style>
 </head>
@@ -165,6 +168,7 @@ return new Za.prototype.init(a,b,c,d,e)}m.Tween=Za,Za.prototype={constructor:Za,
 				// serializing the DOM to a file
 				$('#download_button').click(function(e) {
 					path = window.location.pathname;
+					$(this).attr('href', '');
 					$(this).attr('href', 'data:text/html,' + encodeURIComponent($('html')[0].outerHTML));
 					$(this).attr('download', path.substr(path.lastIndexOf('/') + 1));
 				});
@@ -179,7 +183,7 @@ return new Za.prototype.init(a,b,c,d,e)}m.Tween=Za,Za.prototype={constructor:Za,
 <li><a class="page_anchor" href="#page_5">5</a></li>
 <li><a class="page_anchor" href="#page_6">6</a></li>
 </ul>
-<a href="#" id="download_button">Download</a>
+<a id="download_button" download="set1.modified.html" href="">Download</a>
 </nav>
 <section class="page container" id="page_1">
 <div class="column">
@@ -304,7 +308,7 @@ return new Za.prototype.init(a,b,c,d,e)}m.Tween=Za,Za.prototype={constructor:Za,
 						
 							NRec. II 276. Et il a (senefie) Adam nostre
 						
-					</li><li data-bbox="119, 1218, 620, 1257" data-placeholder="Enter text for line 10" id="line_10" spellcheck="true" contenteditable="true">
+					</li><li data-bbox="119, 1218, 620, 1257" data-placeholder="Enter text for line 10" id="line_10" spellcheck="true" class="" contenteditable="true">
 						
 							10 pere, BCond. 217, 388.
 						
@@ -344,7 +348,7 @@ return new Za.prototype.init(a,b,c,d,e)}m.Tween=Za,Za.prototype={constructor:Za,
 						
 					</li><li class="" data-bbox="120, 1938, 1028, 1976" data-placeholder="Enter text for line 25" id="line_25" spellcheck="true" contenteditable="true">
 						
-							͂35 Li grant delit, Emp. Coust. 106. Chascuns</li><li class="" data-bbox="171, 1986, 1029, 2024" data-placeholder="Enter text for line 26" id="line_26" spellcheck="true" contenteditable="true">escrie: ha las, ha las! Secorez nos saint</li><li class="" data-bbox="172, 2033, 1026, 2073" data-placeholder="Enter text for line 27" id="line_27" spellcheck="true" contenteditable="true">Nicolas, Mont. Fabl. V 87. Ch. lyon 3067.</li><li class="" data-bbox="171, 2080, 940, 2121" data-placeholder="Enter text for line 28" id="line_28" spellcheck="true" contenteditable="true">Eust. Moine 609. GDote 3635 vgl. las.</li><li class="" data-bbox="236, 2128, 1030, 2168" data-placeholder="Enter text for line 29" id="line_29" spellcheck="true" contenteditable="true">Entrüstrung: Begin, ce dient, se derive</li><li class="" data-bbox="119, 2176, 1027, 2217" data-placeholder="Enter text for line 30" id="line_30" spellcheck="true" contenteditable="true">30 Et vient „a benignitate". Ha ha larron,</li><li class="" data-bbox="174, 2224, 1027, 2264" data-placeholder="Enter text for line 31" id="line_31" spellcheck="true" contenteditable="true">quel barat, e, Barb. u. I 320, 1518</li><li class="" data-bbox="172, 2272, 1027, 2312" data-placeholder="Enter text for line 32" id="line_32" spellcheck="true" contenteditable="true">Ha, mauvès home trahitier, eb. III 237,</li><li data-bbox="175, 2316, 1027, 2365" data-placeholder="Enter text for line 33" id="line_33" spellcheck="true" contenteditable="true">259</li><li class="" data-bbox="239, 2365, 1030, 2408" data-placeholder="Enter text for line 34" id="line_34" spellcheck="true" contenteditable="true">Bewunderung, Billigun: 'Ha, dame, or<br></li><li data-bbox="118, 2416, 881, 2456" data-placeholder="Enter text for line 35" id="line_35" spellcheck="true" contenteditable="true">35 dites vos mout bien, Ch. lyon 3128.<br></li><li class="" data-bbox="235, 2464, 1028, 2505" data-placeholder="Enter text for line 36" id="line_36" spellcheck="true" contenteditable="true">Erstaunen: Je n'ö mès tel non pieça.<br></li><li data-bbox="177, 2511, 1030, 2550" data-placeholder="Enter text for line 37" id="line_37" spellcheck="true" contenteditable="true">- Fet mis sire Guillames: ha, En mon<br></li><li class="" data-bbox="171, 2559, 1027, 2597" data-placeholder="Enter text for line 38" id="line_38" spellcheck="true" contenteditable="true">païs en a assez, GDole 2999. RCharr. 5092.<br></li><li data-bbox="237, 2614, 393, 2645" data-placeholder="Enter text for line 39" id="line_39" spellcheck="true" contenteditable="true">a praep.<br></li><li data-bbox="118, 2655, 393, 2685" data-placeholder="Enter text for line 40" id="line_40" spellcheck="true" contenteditable="true">40 1. local<br></li><li data-bbox="237, 2703, 1030, 2740" data-placeholder="Enter text for line 41" id="line_41" spellcheck="true" contenteditable="true">Ankunftsort : vint . . dreitement a la<br></li></ul></div><div class="column"><ul><li class="" data-bbox="1088, 790, 1948, 826" data-placeholder="Enter text for line 42" id="line_42" spellcheck="true" contenteditable="true">mer, Alex. 16 a. Dreit a Lalice. . Iloc<br></li><li class="" data-bbox="1089, 838, 1946, 875" data-placeholder="Enter text for line 43" id="line_43" spellcheck="true" contenteditable="true">arivet sainement la nacele, eb. 17a. en<br></li><li class="" data-bbox="1090, 885, 1947, 924" data-placeholder="Enter text for line 44" id="line_44" spellcheck="true" contenteditable="true">eisit danz Alexis a terre, eb. 17 c. s'asist<br></li><li class="" data-bbox="1088, 934, 1947, 972" data-placeholder="Enter text for line 45" id="line_45" spellcheck="true" contenteditable="true">La medre jus a terre, eb. 80a. Au mostier<br></li><li class="" data-bbox="1088, 981, 2002, 1024" data-placeholder="Enter text for line 46" id="line_46" spellcheck="true" contenteditable="true">l'en porterent, si l'ont dieu presentet (das 5<br></li><li class="" data-bbox="1089, 1030, 1946, 1070" data-placeholder="Enter text for line 47" id="line_47" spellcheck="true" contenteditable="true">Kind), Alex. H. 79. a Magunze alerent,<br></li><li class="" data-bbox="1092, 1078, 1946, 1118" data-placeholder="Enter text for line 48" id="line_48" spellcheck="true" contenteditable="true">Ph. Thaon Comp. 8280. arriverent a Mar-<br></li><li class="" data-bbox="1089, 1126, 1948, 1165" data-placeholder="Enter text for line 49" id="line_49" spellcheck="true" contenteditable="true">seille SMagd. 27. la renomee de cel saint<br></li><li class="" data-bbox="1089, 1174, 1945, 1217" data-placeholder="Enter text for line 50" id="line_50" spellcheck="true" contenteditable="true">home ala tant qu'ele vint a l'apostoile,<br></li><li class="" data-bbox="1095, 1222, 2006, 1263" data-placeholder="Enter text for line 51" id="line_51" spellcheck="true" contenteditable="true">Villeh. 2; horterent a lui, Dial. Gr. 12, 6. 10<br></li><li class="" data-bbox="1089, 1270, 1944, 1311" data-placeholder="Enter text for line 52" id="line_52" spellcheck="true" contenteditable="true">A la Magdaleine est venu, SMagd. 189.<br></li><li class="" data-bbox="1090, 1318, 1783, 1361" data-placeholder="Enter text for line 53" id="line_53" spellcheck="true" contenteditable="true">Ch. lyon 1261. 2749. s. auch jusque.<br></li><li class="" data-bbox="1152, 1366, 1945, 1409" data-placeholder="Enter text for line 54" id="line_54" spellcheck="true" contenteditable="true">Ziel (abstrakt): revient a la besoingne,<br></li><li class="" data-bbox="1090, 1414, 1947, 1457" data-placeholder="Enter text for line 55" id="line_55" spellcheck="true" contenteditable="true">Ch. lyon 4488. iroie a mon afeire, Ch. lyon<br></li><li data-bbox="1087, 1461, 1735, 1496" data-placeholder="Enter text for line 56" id="line_56" spellcheck="true" contenteditable="true">H 4149. a chief. venir a merci. 15<br></li><li class="" data-bbox="1154, 1510, 1947, 1551" data-placeholder="Enter text for line 57" id="line_57" spellcheck="true" contenteditable="true">bis, bis zu einem Betrage (der Ausdruck<br></li><li class="" data-bbox="1090, 1558, 1946, 1601" data-placeholder="Enter text for line 58" id="line_58" spellcheck="true" contenteditable="true">im Sinne eines Substantivs ohne Präposition,<br></li><li class="" data-bbox="1089, 1606, 1946, 1647" data-placeholder="Enter text for line 59" id="line_59" spellcheck="true" contenteditable="true">wie bei jusque): N'en puet a toz ces (= ses)<br></li><li class="" data-bbox="1088, 1654, 1946, 1694" data-placeholder="Enter text for line 60" id="line_60" spellcheck="true" contenteditable="true">oirs laissier A la montance d'un denier,<br></li><li class="" data-bbox="1090, 1701, 1713, 1739" data-placeholder="Enter text for line 61" id="line_61" spellcheck="true" contenteditable="true">Rlois I, S. VIII. s. montance. 20<br></li><li class="" data-bbox="1154, 1750, 1947, 1792" data-placeholder="Enter text for line 62" id="line_62" spellcheck="true" contenteditable="true">Ort wo, Nähe, bei, zu: se croisa li quens<br></li><li class="" data-bbox="1088, 1797, 1948, 1838" data-placeholder="Enter text for line 63" id="line_63" spellcheck="true" contenteditable="true">Baudoins . . a Bruges , Villeh. 8. Al mostier<br></li><li class="" data-bbox="1086, 1843, 1946, 1884" data-placeholder="Enter text for line 64" id="line_64" spellcheck="true" contenteditable="true">fu Guillelmes Fierebrace, Cor. Lo. 326. E au<br></li><li class="" data-bbox="1087, 1894, 1946, 1936" data-placeholder="Enter text for line 65" id="line_65" spellcheck="true" contenteditable="true">temple ou deus out géu E au temple Salo-<br></li><li class="" data-bbox="1088, 1941, 2005, 1982" data-placeholder="Enter text for line 66" id="line_66" spellcheck="true" contenteditable="true">mon fu (der Pilger), SMagd, 515. serveit 25<br></li><li class="" data-bbox="1089, 1988, 1947, 2025" data-placeholder="Enter text for line 67" id="line_67" spellcheck="true" contenteditable="true">a l'alter, Alex. 84d. sont en une nef entré<br></li><li class="" data-bbox="1095, 2037, 1945, 2079" data-placeholder="Enter text for line 68" id="line_68" spellcheck="true" contenteditable="true">Que fu appareillée au port, SMag. 215.<br></li><li class="" data-bbox="1089, 2083, 1947, 2125" data-placeholder="Enter text for line 69" id="line_69" spellcheck="true" contenteditable="true">E quant il furent au palacre, Si s'en alerent<br></li><li class="" data-bbox="1088, 2132, 1946, 2174" data-placeholder="Enter text for line 70" id="line_70" spellcheck="true" contenteditable="true">dreit vers Acre, eb. 219. Que demain toz<br></li><li class="" data-bbox="1089, 2182, 2006, 2219" data-placeholder="Enter text for line 71" id="line_71" spellcheck="true" contenteditable="true">as guez ne truise, Guil. d'A.&nbsp; 8040. ot un 30<br></li><li class="" data-bbox="1088, 2229, 1947, 2270" data-placeholder="Enter text for line 72" id="line_72" spellcheck="true" contenteditable="true">tornol en Champaigne a un chastel qui ot<br></li><li class="" data-bbox="1088, 2276, 1947, 2313" data-placeholder="Enter text for line 73" id="line_73" spellcheck="true" contenteditable="true">nom Aicris. Villehh. 8. A choisi la chité<br></li><li class="" data-bbox="1089, 2323, 1946, 2365" data-placeholder="Enter text for line 74" id="line_74" spellcheck="true" contenteditable="true">
+							͂35 Li grant delit, Emp. Coust. 106. Chascuns</li><li class="" data-bbox="171, 1986, 1029, 2024" data-placeholder="Enter text for line 26" id="line_26" spellcheck="true" contenteditable="true">escrie: ha las, ha las! Secorez nos saint</li><li class="" data-bbox="172, 2033, 1026, 2073" data-placeholder="Enter text for line 27" id="line_27" spellcheck="true" contenteditable="true">Nicolas, Mont. Fabl. V 87. Ch. lyon 3067.</li><li class="" data-bbox="171, 2080, 940, 2121" data-placeholder="Enter text for line 28" id="line_28" spellcheck="true" contenteditable="true">Eust. Moine 609. GDote 3635 vgl. las.</li><li class="" data-bbox="236, 2128, 1030, 2168" data-placeholder="Enter text for line 29" id="line_29" spellcheck="true" contenteditable="true">Entrüstrung: Begin, ce dient, se derive</li><li class="" data-bbox="119, 2176, 1027, 2217" data-placeholder="Enter text for line 30" id="line_30" spellcheck="true" contenteditable="true">30 Et vient „a benignitate". Ha ha larron,</li><li class="" data-bbox="174, 2224, 1027, 2264" data-placeholder="Enter text for line 31" id="line_31" spellcheck="true" contenteditable="true">quel barat, e, Barb. u. I 320, 1518</li><li class="" data-bbox="172, 2272, 1027, 2312" data-placeholder="Enter text for line 32" id="line_32" spellcheck="true" contenteditable="true">Ha, mauvès home trahitier, eb. III 237,</li><li data-bbox="175, 2316, 1027, 2365" data-placeholder="Enter text for line 33" id="line_33" spellcheck="true" class="" contenteditable="true">259. Gorm². 102. 180 usw. (s. Rom. V 378).</li><li class="" data-bbox="239, 2365, 1030, 2408" data-placeholder="Enter text for line 34" id="line_34" spellcheck="true" contenteditable="true">Bewunderung, Billigun: 'Ha, dame, or</li><li data-bbox="118, 2416, 881, 2456" data-placeholder="Enter text for line 35" id="line_35" spellcheck="true" contenteditable="true">35 dites vos mout bien, Ch. lyon 3128.</li><li class="" data-bbox="235, 2464, 1028, 2505" data-placeholder="Enter text for line 36" id="line_36" spellcheck="true" contenteditable="true">Erstaunen: Je n'ö mès tel non pieça.</li><li data-bbox="177, 2511, 1030, 2550" data-placeholder="Enter text for line 37" id="line_37" spellcheck="true" contenteditable="true">- Fet mis sire Guillames: ha, En mon</li><li class="" data-bbox="171, 2559, 1027, 2597" data-placeholder="Enter text for line 38" id="line_38" spellcheck="true" contenteditable="true">païs en a assez, GDole 2999. RCharr. 5092.</li><li data-bbox="237, 2614, 393, 2645" data-placeholder="Enter text for line 39" id="line_39" spellcheck="true" contenteditable="true">a praep.</li><li data-bbox="118, 2655, 393, 2685" data-placeholder="Enter text for line 40" id="line_40" spellcheck="true" contenteditable="true">40 1. local</li><li data-bbox="237, 2703, 1030, 2740" data-placeholder="Enter text for line 41" id="line_41" spellcheck="true" contenteditable="true">Ankunftsort : vint . . dreitement a la</li></ul></div><div class="column"><ul><li class="" data-bbox="1088, 790, 1948, 826" data-placeholder="Enter text for line 42" id="line_42" spellcheck="true" contenteditable="true">mer, Alex. 16 a. Dreit a Lalice. . Iloc</li><li class="" data-bbox="1089, 838, 1946, 875" data-placeholder="Enter text for line 43" id="line_43" spellcheck="true" contenteditable="true">arivet sainement la nacele, eb. 17a. en</li><li class="" data-bbox="1090, 885, 1947, 924" data-placeholder="Enter text for line 44" id="line_44" spellcheck="true" contenteditable="true">eisit danz Alexis a terre, eb. 17 c. s'asist</li><li class="" data-bbox="1088, 934, 1947, 972" data-placeholder="Enter text for line 45" id="line_45" spellcheck="true" contenteditable="true">La medre jus a terre, eb. 80a. Au mostier</li><li class="" data-bbox="1088, 981, 2002, 1024" data-placeholder="Enter text for line 46" id="line_46" spellcheck="true" contenteditable="true">l'en porterent, si l'ont dieu presentet (das 5</li><li class="" data-bbox="1089, 1030, 1946, 1070" data-placeholder="Enter text for line 47" id="line_47" spellcheck="true" contenteditable="true">Kind), Alex. H. 79. a Magunze alerent,</li><li class="" data-bbox="1092, 1078, 1946, 1118" data-placeholder="Enter text for line 48" id="line_48" spellcheck="true" contenteditable="true">Ph. Thaon Comp. 8280. arriverent a Mar-</li><li class="" data-bbox="1089, 1126, 1948, 1165" data-placeholder="Enter text for line 49" id="line_49" spellcheck="true" contenteditable="true">seille SMagd. 27. la renomee de cel saint</li><li class="" data-bbox="1089, 1174, 1945, 1217" data-placeholder="Enter text for line 50" id="line_50" spellcheck="true" contenteditable="true">home ala tant qu'ele vint a l'apostoile,</li><li class="" data-bbox="1095, 1222, 2006, 1263" data-placeholder="Enter text for line 51" id="line_51" spellcheck="true" contenteditable="true">Villeh. 2; horterent a lui, Dial. Gr. 12, 6. 10</li><li class="" data-bbox="1089, 1270, 1944, 1311" data-placeholder="Enter text for line 52" id="line_52" spellcheck="true" contenteditable="true">A la Magdaleine est venu, SMagd. 189.</li><li class="" data-bbox="1090, 1318, 1783, 1361" data-placeholder="Enter text for line 53" id="line_53" spellcheck="true" contenteditable="true">Ch. lyon 1261. 2749. s. auch jusque.</li><li class="" data-bbox="1152, 1366, 1945, 1409" data-placeholder="Enter text for line 54" id="line_54" spellcheck="true" contenteditable="true">Ziel (abstrakt): revient a la besoingne,</li><li class="" data-bbox="1090, 1414, 1947, 1457" data-placeholder="Enter text for line 55" id="line_55" spellcheck="true" contenteditable="true">Ch. lyon 4488. iroie a mon afeire, Ch. lyon</li><li data-bbox="1087, 1461, 1735, 1496" data-placeholder="Enter text for line 56" id="line_56" spellcheck="true" contenteditable="true">H 4149. a chief. venir a merci. 15</li><li class="" data-bbox="1154, 1510, 1947, 1551" data-placeholder="Enter text for line 57" id="line_57" spellcheck="true" contenteditable="true">bis, bis zu einem Betrage (der Ausdruck</li><li class="" data-bbox="1090, 1558, 1946, 1601" data-placeholder="Enter text for line 58" id="line_58" spellcheck="true" contenteditable="true">im Sinne eines Substantivs ohne Präposition,</li><li class="" data-bbox="1089, 1606, 1946, 1647" data-placeholder="Enter text for line 59" id="line_59" spellcheck="true" contenteditable="true">wie bei jusque): N'en puet a toz ces (= ses)</li><li class="" data-bbox="1088, 1654, 1946, 1694" data-placeholder="Enter text for line 60" id="line_60" spellcheck="true" contenteditable="true">oirs laissier A la montance d'un denier,</li><li class="" data-bbox="1090, 1701, 1713, 1739" data-placeholder="Enter text for line 61" id="line_61" spellcheck="true" contenteditable="true">Rlois I, S. VIII. s. montance. 20</li><li class="" data-bbox="1154, 1750, 1947, 1792" data-placeholder="Enter text for line 62" id="line_62" spellcheck="true" contenteditable="true">Ort wo, Nähe, bei, zu: se croisa li quens</li><li class="" data-bbox="1088, 1797, 1948, 1838" data-placeholder="Enter text for line 63" id="line_63" spellcheck="true" contenteditable="true">Baudoins . . a Bruges , Villeh. 8. Al mostier</li><li class="" data-bbox="1086, 1843, 1946, 1884" data-placeholder="Enter text for line 64" id="line_64" spellcheck="true" contenteditable="true">fu Guillelmes Fierebrace, Cor. Lo. 326. E au</li><li class="" data-bbox="1087, 1894, 1946, 1936" data-placeholder="Enter text for line 65" id="line_65" spellcheck="true" contenteditable="true">-----------------------------------------------------------------------</li><li class="" data-bbox="1088, 1941, 2005, 1982" data-placeholder="Enter text for line 66" id="line_66" spellcheck="true" contenteditable="true">mon fu (der Pilger), SMagd, 515. serveit 25<br></li><li class="" data-bbox="1089, 1988, 1947, 2025" data-placeholder="Enter text for line 67" id="line_67" spellcheck="true" contenteditable="true">a l'alter, Alex. 84d. sont en une nef entré<br></li><li class="" data-bbox="1095, 2037, 1945, 2079" data-placeholder="Enter text for line 68" id="line_68" spellcheck="true" contenteditable="true">Que fu appareillée au port, SMag. 215.<br></li><li class="" data-bbox="1089, 2083, 1947, 2125" data-placeholder="Enter text for line 69" id="line_69" spellcheck="true" contenteditable="true">E quant il furent au palacre, Si s'en alerent<br></li><li class="" data-bbox="1088, 2132, 1946, 2174" data-placeholder="Enter text for line 70" id="line_70" spellcheck="true" contenteditable="true">dreit vers Acre, eb. 219. Que demain toz<br></li><li class="" data-bbox="1089, 2182, 2006, 2219" data-placeholder="Enter text for line 71" id="line_71" spellcheck="true" contenteditable="true">as guez ne truise, Guil. d'A.&nbsp; 8040. ot un 30<br></li><li class="" data-bbox="1088, 2229, 1947, 2270" data-placeholder="Enter text for line 72" id="line_72" spellcheck="true" contenteditable="true">tornol en Champaigne a un chastel qui ot<br></li><li class="" data-bbox="1088, 2276, 1947, 2313" data-placeholder="Enter text for line 73" id="line_73" spellcheck="true" contenteditable="true">nom Aicris. Villehh. 8. A choisi la chité<br></li><li class="" data-bbox="1089, 2323, 1946, 2365" data-placeholder="Enter text for line 74" id="line_74" spellcheck="true" contenteditable="true">
 						
 							dessus le mer ombrage Qui couroit a l'un<br></li><li class="" data-bbox="1089, 2371, 1948, 2408" data-placeholder="Enter text for line 75" id="line_75" spellcheck="true" contenteditable="true">les, Bast. 82. adiès commence on a faire<br></li><li class="" data-bbox="1088, 2419, 2005, 2459" data-placeholder="Enter text for line 76" id="line_76" spellcheck="true" contenteditable="true">Au fondement une maziere, BCond. 285, 35<br></li><li class="" data-bbox="1092, 2466, 1946, 2506" data-placeholder="Enter text for line 77" id="line_77" spellcheck="true" contenteditable="true">
 						
@@ -529,359 +533,13 @@ return new Za.prototype.init(a,b,c,d,e)}m.Tween=Za,Za.prototype={constructor:Za,
 <a alt="line_169" class="rect" href="" style="position: absolute; left: 52.32974910394265%; top: 94.70338983050847%; width: 39.784946236559136%; height: 1.271186440677966%; z-index: 2;" title=""></a>
 <a alt="line_170" class="rect" href="" style="position: absolute; left: 12.275985663082437%; top: 94.80932203389831%; width: 7.482078853046595%; height: 1.271186440677966%; z-index: 2;" title=""></a>
 </div>
-</div><div class="column"><ul><li data-bbox="271, 231, 2056, 276" data-placeholder="Enter text for line 83" id="line_83" spellcheck="true" contenteditable="true">
-						
-							eb. t. s'a ta cort chevalier a, Carr. .  Beschdiftiun, Custand, Lae, in der
-						
-					</li><li data-bbox="275, 276, 2055, 322" data-placeholder="Enter text for line 84" id="line_84" spellcheck="true" class="" contenteditable="true">
-						
-							Seiez a nostre assermblement (dabei u--  man ist, in die ma versett: al disner iert
-						
-					</li><li data-bbox="271, 327, 2054, 372" data-placeholder="Enter text for line 85" id="line_85" spellcheck="true" class="" contenteditable="true">
-						
-							cen), To. 962. n'i remanroient plus a  asis, Rou II I9. Fu tote nuit a orlson,
-						
-					</li><li data-bbox="275, 372, 2055, 420" data-placeholder="Enter text for line 86" id="line_86" spellcheck="true" class="" contenteditable="true">
-						
-							ohannls, Ville. 44. Aiols remest al roi  o. Eouc. 32. E od vos com od nmon
-						
-					</li><li data-bbox="238, 422, 2106, 466" data-placeholder="Enter text for line 87" id="line_87" spellcheck="true" class="" contenteditable="true">
-						
-							͂ de saint Denise, Aiol 318. hebergier en  scignor (deci strc au travail e au suor, 3
-						
-					</li><li data-bbox="272, 466, 2055, 515" data-placeholder="Enter text for line 88" id="line_88" spellcheck="true" class="" contenteditable="true">
-						
-							boine vile Au plus haut oste, au plus   Sfagd. t 4. A joic furent cele nuit Li
-						
-					</li><li data-bbox="273, 519, 2055, 561" data-placeholder="Enter text for line 89" id="line_89" spellcheck="true" contenteditable="true">
-						
-							nobile, Amad. æ6s2. se hierbegoient As  rois et par la cit́ tuit, oufr. 39I. Ses
-						
-					</li><li data-bbox="272, 561, 2055, 612" data-placeholder="Enter text for line 90" id="line_90" spellcheck="true" contenteditable="true">
-						
-							boines gens que ll trovoient, fous. 292I.  fius demora en la tlere, Sovent a pais,
-						
-					</li><li data-bbox="273, 612, 2055, 657" data-placeholder="Enter text for line 91" id="line_91" spellcheck="true" contenteditable="true">
-						
-							Or dêust estre a Parlts u a Chartecs Ou en  sovent a glere, Vfous. 0 660. est repairiés
-						
-					</li><li data-bbox="1163, 657, 2107, 713" data-placeholder="Enter text for line 92" id="line_92" spellcheck="true" contenteditable="true">
-						
-							Ces sabvel s'antain . . Qut a la poverteit t0
-						
-					</li><li data-bbox="217, 666, 1133, 707" data-placeholder="Enter text for line 93" id="line_93" spellcheck="true" contenteditable="true">
-						
-							0 Espaigne u au roi de Navaire, Elie 49.
-						
-					</li><li data-bbox="271, 714, 1134, 752" data-placeholder="Enter text for line 94" id="line_94" spellcheck="true" contenteditable="true">
-						
-							fustes vous avu rol (vart ilr bei ilm, um
-						
-					</li><li data-bbox="1164, 712, 2055, 751" data-placeholder="Enter text for line 95" id="line_95" spellcheck="true" contenteditable="true">
-						
-							li ot aldlet, Et iil a la ricolse nel vaut laisier,
-						
-					</li><li data-bbox="272, 762, 1165, 801" data-placeholder="Enter text for line 96" id="line_96" spellcheck="true" contenteditable="true">
-						
-							die Botsctat u bestelle , C. II esp. 363. a
-						
-					</li><li data-bbox="273, 810, 1133, 851" data-placeholder="Enter text for line 97" id="line_97" spellcheck="true" contenteditable="true">
-						
-							seu Tot son esclo, tant qu'a lui fu, oufr.
-						
-					</li><li data-bbox="275, 858, 1133, 894" data-placeholder="Enter text for line 98" id="line_98" spellcheck="true" contenteditable="true">
-						
-							27. Custume fu as anciens, Vce Lais Pro.9.
-						
-					</li><li data-bbox="217, 906, 1135, 945" data-placeholder="Enter text for line 99" id="line_99" spellcheck="true" contenteditable="true">
-						
-							1 ebenso eb.  63. s. auc apoiier, aprochier.
-						
-					</li><li data-bbox="338, 954, 1135, 992" data-placeholder="Enter text for line 100" id="line_100" spellcheck="true" contenteditable="true">
-						
-							a ostel vohnaff, u Huse, nacl ause:
-						
-					</li><li data-bbox="273, 1002, 1136, 1041" data-placeholder="Enter text for line 101" id="line_101" spellcheck="true" contenteditable="true">
-						
-							un riche palais ou ll dux de Venise ere a
-						
-					</li><li data-bbox="272, 1051, 782, 1088" data-placeholder="Enter text for line 102" id="line_102" spellcheck="true" contenteditable="true">
-						
-							ostel, Vlel. 59. s. ostel.
-						
-					</li><li data-bbox="338, 1099, 959, 1137" data-placeholder="Enter text for line 103" id="line_103" spellcheck="true" contenteditable="true">
-						
-							a cort bei Hofe, u Hofe : s. cort.
-						
-					</li><li data-bbox="216, 1147, 1135, 1182" data-placeholder="Enter text for line 104" id="line_104" spellcheck="true" contenteditable="true">
-						
-							0 ibertr. a cuer u erCen, am Heren :
-						
-					</li><li data-bbox="272, 1194, 1137, 1230" data-placeholder="Enter text for line 105" id="line_105" spellcheck="true" contenteditable="true">
-						
-							s. cuer. Iie fu a son coer, ast. 1. n'en
-						
-					</li><li data-bbox="275, 1243, 938, 1278" data-placeholder="Enter text for line 106" id="line_106" spellcheck="true" contenteditable="true">
-						
-							́ust dolor al cuer, Vroie 6 aI4.
-						
-					</li><li data-bbox="338, 1290, 1136, 1329" data-placeholder="Enter text for line 107" id="line_107" spellcheck="true" contenteditable="true">
-						
-							an, gegeniber, ausgesett : et il laissent
-						
-					</li><li data-bbox="273, 1338, 1136, 1375" data-placeholder="Enter text for line 108" id="line_108" spellcheck="true" contenteditable="true">
-						
-							aler les voiles al vent, Ville. tt9. et laissent
-						
-					</li><li data-bbox="1195, 760, 2055, 798" data-placeholder="Enter text for line 109" id="line_109" spellcheck="true" contenteditable="true">
-						
-							Aiolt 367. par li. . EEt NIordrês, e croi.
-						
-					</li><li data-bbox="1196, 808, 2055, 845" data-placeholder="Enter text for line 110" id="line_110" spellcheck="true" contenteditable="true">
-						
-							a la mort (dem ode nahe), Escan. 10.
-						
-					</li><li data-bbox="1167, 856, 2057, 896" data-placeholder="Enter text for line 111" id="line_111" spellcheck="true" contenteditable="true">
-						
-							so nacl adj. : fu molt malades et prochicns
-						
-					</li><li data-bbox="1167, 902, 2107, 943" data-placeholder="Enter text for line 112" id="line_112" spellcheck="true" contenteditable="true">
-						
-							a la mort, Turpin I 3, 25. metre a mort. I3
-						
-					</li><li data-bbox="1166, 943, 2054, 996" data-placeholder="Enter text for line 113" id="line_113" spellcheck="true" contenteditable="true">
-						
-							a sa fin, East. 4t. a la fuie. a la voie.
-						
-					</li><li data-bbox="1166, 996, 2054, 1043" data-placeholder="Enter text for line 114" id="line_114" spellcheck="true" contenteditable="true">
-						
-							au desore. au desoz. metre a ralson. a ptu-
-						
-					</li><li data-bbox="1167, 1043, 2054, 1088" data-placeholder="Enter text for line 115" id="line_115" spellcheck="true" contenteditable="true">
-						
-							tage IDit quc sa fille lt metra, C. lgon
-						
-					</li><li data-bbox="1167, 1088, 2056, 1138" data-placeholder="Enter text for line 116" id="line_116" spellcheck="true" contenteditable="true">
-						
-							 IS. ien vos metral a garlson, C. lgon
-						
-					</li><li data-bbox="1167, 1138, 1292, 1187" data-placeholder="Enter text for line 117" id="line_117" spellcheck="true" contenteditable="true">
-						
-							I6s.
-						
-					</li><li data-bbox="1167, 1192, 2054, 1236" data-placeholder="Enter text for line 118" id="line_118" spellcheck="true" contenteditable="true">
-						
-							Anveseneit bei einem Tun, Reteiligun;
-						
-					</li><li data-bbox="1167, 1236, 2057, 1282" data-placeholder="Enter text for line 119" id="line_119" spellcheck="true" contenteditable="true">
-						
-							vaura anqul estre as cos premiers, A iol
-						
-					</li><li data-bbox="1166, 1282, 2054, 1331" data-placeholder="Enter text for line 120" id="line_120" spellcheck="true" contenteditable="true">
-						
-							2262. a toz les consetls fu, Ville. I0.
-						
-					</li><li data-bbox="1166, 1331, 2056, 1376" data-placeholder="Enter text for line 121" id="line_121" spellcheck="true" contenteditable="true">
-						
-							 Car au regne dou chiel vot avoir sa partie,
-						
-					</li><li data-bbox="216, 1384, 2108, 1428" data-placeholder="Enter text for line 122" id="line_122" spellcheck="true" contenteditable="true">
-						
-							23 les voiiles al vent aler, eb. I33. issirent de  Aler. H I3. aillir a a. r. nichtt teilhtat, ;
-						
-					</li><li data-bbox="272, 1428, 1499, 1475" data-placeholder="Enter text for line 123" id="line_123" spellcheck="true" contenteditable="true">
-						
-							ieles, les lvanieres au vent, East. DO8S.  abat verden).
-						
-					</li><li data-bbox="273, 1482, 2057, 1521" data-placeholder="Enter text for line 124" id="line_124" spellcheck="true" contenteditable="true">
-						
-							au vant enrroé, A gm. Narb. 937. Pier--  Entfernungsma ; A sis liues cn son
-						
-					</li><li data-bbox="272, 1524, 2055, 1571" data-placeholder="Enter text for line 125" id="line_125" spellcheck="true" contenteditable="true">
-						
-							chevaus erroit a la lune, Perc. 34 96. clemin Aloit (secls Stunden uveit), Eust.
-						
-					</li><li data-bbox="273, 1571, 2057, 1617" data-placeholder="Enter text for line 126" id="line_126" spellcheck="true" contenteditable="true">
-						
-							Tant li froia au chaut soloil Les tanples i foine t 63. a une abbale qul ere a trois
-						
-					</li></ul></div><div class="column"><ul><li data-bbox="1167, 1617, 2108, 1660" data-placeholder="Enter text for line 127" id="line_127" spellcheck="true" contenteditable="true">
+</div><div class="column"><ul><li data-bbox="271, 231, 2056, 276" data-placeholder="Enter text for line 83" id="line_83" spellcheck="true" class="" contenteditable="true">eb. 117. s'a ta cort chevalier a, RCharr. 72. Beschäftigung, Zustand, Lage, in der<br></li><li data-bbox="275, 276, 2055, 322" data-placeholder="Enter text for line 84" id="line_84" spellcheck="true" class="" contenteditable="true">Seiez a nostre assemblement (dabei zu- man ist in die man versetzt: ai disner iert<br></li><li data-bbox="271, 327, 2054, 372" data-placeholder="Enter text for line 85" id="line_85" spellcheck="true" class="" contenteditable="true">gegen), Tob. 962. n'i remanroient plus a asis, Rou II 2179. Fu tote nuit a orison,<br></li><li data-bbox="275, 372, 2055, 420" data-placeholder="Enter text for line 86" id="line_86" spellcheck="true" class="" contenteditable="true">Johannis, Villeh. 474. Aiols remest al roi Joh. Bouch. 372. E od vos com od mon<br></li><li data-bbox="238, 422, 2106, 466" data-placeholder="Enter text for line 87" id="line_87" spellcheck="true" class="" contenteditable="true">5 de saint Denis, Aiol 3498. hebergier en seignor (dei) Estre au travail e au suor, 5<br></li><li data-bbox="272, 466, 2055, 515" data-placeholder="Enter text for line 88" id="line_88" spellcheck="true" class="" contenteditable="true">boine vile Au plus haut oste, au plus SMagd. 174. A joie furent cele nuit Li<br></li><li data-bbox="273, 519, 2055, 561" data-placeholder="Enter text for line 89" id="line_89" spellcheck="true" class="" contenteditable="true">nobile, Amad. 2682. se hierbegoient As rois et par la cité tuit, Jouf. 3191. Ses<br></li><li data-bbox="272, 561, 2055, 612" data-placeholder="Enter text for line 90" id="line_90" spellcheck="true" class="" contenteditable="true">Boines gens que il trovoient, Mousk. 29217. fius demora en la tiere, Sovent a pais,<br></li><li data-bbox="273, 612, 2055, 657" data-placeholder="Enter text for line 91" id="line_91" spellcheck="true" contenteditable="true">Or dëust estre a Paris u a Chartes Ou en sovent a giere, Mousk. 20 660. est repairiés<br></li><li data-bbox="1163, 657, 2107, 713" data-placeholder="Enter text for line 92" id="line_92" spellcheck="true" class="" contenteditable="true">Cies Ysabel s'antain . . Qui a la poverteit 10<br></li><li data-bbox="217, 666, 1133, 707" data-placeholder="Enter text for line 93" id="line_93" spellcheck="true" contenteditable="true">10 Espaigne u au roi de Navaire, Elie 49.<br></li><li data-bbox="271, 714, 1134, 752" data-placeholder="Enter text for line 94" id="line_94" spellcheck="true" contenteditable="true">Juses vous au roi (wart ihr&nbsp; bei ihm, um<br></li><li data-bbox="1164, 712, 2055, 751" data-placeholder="Enter text for line 95" id="line_95" spellcheck="true" class="" contenteditable="true">li ot aidiet, Et il a la ricoise nel vaut laisier,<br></li><li data-bbox="272, 762, 1165, 801" data-placeholder="Enter text for line 96" id="line_96" spellcheck="true" contenteditable="true">die Botschaft zu Bestellen ?), Ch. II esp. 365. l'a<br></li><li data-bbox="273, 810, 1133, 851" data-placeholder="Enter text for line 97" id="line_97" spellcheck="true" contenteditable="true">segu Tot son esclo tant qu'a lui fu, Joufr.<br></li><li data-bbox="275, 858, 1133, 894" data-placeholder="Enter text for line 98" id="line_98" spellcheck="true" contenteditable="true">3372. Custume fu as ancïens, MFce Lais Prol. 9.<br></li><li data-bbox="217, 906, 1135, 945" data-placeholder="Enter text for line 99" id="line_99" spellcheck="true" contenteditable="true">15 ebenso eb. M 62. s. auch apoiier, aprochier.<br></li><li data-bbox="338, 954, 1135, 992" data-placeholder="Enter text for line 100" id="line_100" spellcheck="true" contenteditable="true">a ostel wohnschaft, zu Hause, nach Hause:<br></li><li data-bbox="273, 1002, 1136, 1041" data-placeholder="Enter text for line 101" id="line_101" spellcheck="true" class="" contenteditable="true">un riche palais ou li dux de Venise ere a<br></li><li data-bbox="272, 1051, 782, 1088" data-placeholder="Enter text for line 102" id="line_102" spellcheck="true" contenteditable="true">ostel, Villeh. 259. s. ostel.<br></li><li data-bbox="338, 1099, 959, 1137" data-placeholder="Enter text for line 103" id="line_103" spellcheck="true" class="" contenteditable="true">a cort bei Hofe, zu Hofe: s. cort.<br></li><li data-bbox="216, 1147, 1135, 1182" data-placeholder="Enter text for line 104" id="line_104" spellcheck="true" class="" contenteditable="true">20 überir, a cuer zu Herzen, am Herzen:<br></li><li data-bbox="272, 1194, 1137, 1230" data-placeholder="Enter text for line 105" id="line_105" spellcheck="true" contenteditable="true">s. cuer Lie fu a son coer, Bast. 1442. n'en<br></li><li data-bbox="275, 1243, 938, 1278" data-placeholder="Enter text for line 106" id="line_106" spellcheck="true" class="" contenteditable="true">ëust dolor al cuer, Troie 16414.<br></li><li data-bbox="338, 1290, 1136, 1329" data-placeholder="Enter text for line 107" id="line_107" spellcheck="true" class="" contenteditable="true">an, gegenüber, ausgestzt: et il laissent<br></li><li data-bbox="273, 1338, 1136, 1375" data-placeholder="Enter text for line 108" id="line_108" spellcheck="true" class="" contenteditable="true">aler les voiles al vent, Villeh. 119. et laissent<br></li><li data-bbox="1195, 760, 2055, 798" data-placeholder="Enter text for line 109" id="line_109" spellcheck="true" class="" contenteditable="true">Aiol 3675. par li . . Est modrès, je croi,</li><li data-bbox="1196, 808, 2055, 845" data-placeholder="Enter text for line 110" id="line_110" spellcheck="true" class="" contenteditable="true">a la mort (dem Tode nahe), Escan. 1207.</li><li data-bbox="1167, 856, 2057, 896" data-placeholder="Enter text for line 111" id="line_111" spellcheck="true" class="" contenteditable="true">so nach adj.: fu molt malades et prochiens</li><li data-bbox="1167, 902, 2107, 943" data-placeholder="Enter text for line 112" id="line_112" spellcheck="true" class="" contenteditable="true">a la mort, Turpin I 5, 25 metre a mort. 15</li><li data-bbox="1166, 943, 2054, 996" data-placeholder="Enter text for line 113" id="line_113" spellcheck="true" class="" contenteditable="true">a sa fin, Bfast. 417. a la fuie, a la voie.</li><li data-bbox="1166, 996, 2054, 1043" data-placeholder="Enter text for line 114" id="line_114" spellcheck="true" class="" contenteditable="true">au desore. au desoz. metre a raison. a pu-</li><li data-bbox="1167, 1043, 2054, 1088" data-placeholder="Enter text for line 115" id="line_115" spellcheck="true" class="" contenteditable="true">tage Dit que sa fille li metra, Ch. lyon</li><li data-bbox="1167, 1088, 2056, 1138" data-placeholder="Enter text for line 116" id="line_116" spellcheck="true" class="" contenteditable="true">H 4118. Bien vos metrai a garison, Ch. lyon</li><li data-bbox="1167, 1138, 1292, 1187" data-placeholder="Enter text for line 117" id="line_117" spellcheck="true" class="" contenteditable="true">1568</li><li data-bbox="1167, 1192, 2054, 1236" data-placeholder="Enter text for line 118" id="line_118" spellcheck="true" class="" contenteditable="true">Anwesenheit bei einem Tun, Beteiligung:<br></li><li data-bbox="1167, 1236, 2057, 1282" data-placeholder="Enter text for line 119" id="line_119" spellcheck="true" class="" contenteditable="true">vaura anqui estre as cos premiers, Aiol<br></li><li data-bbox="1166, 1282, 2054, 1331" data-placeholder="Enter text for line 120" id="line_120" spellcheck="true" class="" contenteditable="true">2628. a toz les conseils fu, Villeh. 120.<br></li><li data-bbox="1166, 1331, 2056, 1376" data-placeholder="Enter text for line 121" id="line_121" spellcheck="true" class="" contenteditable="true">Car au regne dou chiel vot avoir sa partie,<br></li><li data-bbox="216, 1384, 2108, 1428" data-placeholder="Enter text for line 122" id="line_122" spellcheck="true" class="" contenteditable="true">25 les voiles al vent aler, eb. 133. issirent de Alex. H 13. faillir a a. r. (nitch teilhaft, 25<br></li><li data-bbox="272, 1428, 1499, 1475" data-placeholder="Enter text for line 123" id="line_123" spellcheck="true" class="" contenteditable="true">Miekes, les banieres au vent, Bast. 1508. habaft werden).<br></li><li data-bbox="273, 1482, 2057, 1521" data-placeholder="Enter text for line 124" id="line_124" spellcheck="true" class="" contenteditable="true">au vent encröë, Aym. Narb. 937. Pier- Entfernungma$: A sis liues en son<br></li><li data-bbox="272, 1524, 2055, 1571" data-placeholder="Enter text for line 125" id="line_125" spellcheck="true" class="" contenteditable="true">chevaus erroit a la lune, Perc. 24296. chemin Aloit (sechs Stunden weit), Eust.<br></li><li data-bbox="273, 1571, 2057, 1617" data-placeholder="Enter text for line 126" id="line_126" spellcheck="true" class="" contenteditable="true">Tant li frola au chaut soloil Les tanples Moines 162. a une abbaie qui ere a trois<br></li></ul></div><div class="column"><ul><li data-bbox="1167, 1617, 2108, 1660" data-placeholder="Enter text for line 127" id="line_127" spellcheck="true" class="" contenteditable="true">
 						
 							lieues de Costantinoble, VilleA. 7. de 3â̂
 						
-					</li><li data-bbox="216, 1626, 932, 1664" data-placeholder="Enter text for line 128" id="line_128" spellcheck="true" contenteditable="true">
+					</li><li data-bbox="216, 1626, 932, 1664" data-placeholder="Enter text for line 128" id="line_128" spellcheck="true" class="" contenteditable="true">30 et trestot le cors, Ch. lyon 3002<br></li><li data-bbox="336, 1672, 1139, 1713" data-placeholder="Enter text for line 129" id="line_129" spellcheck="true" class="" contenteditable="true">
 						
-							O et trestot le cors, C. lgon ̂o.
-						
-					</li><li data-bbox="336, 1672, 1139, 1713" data-placeholder="Enter text for line 129" id="line_129" spellcheck="true" contenteditable="true">
-						
-							fassen, halten an, ei Tenir me porras
-						
-					</li><li data-bbox="276, 1722, 1141, 1761" data-placeholder="Enter text for line 130" id="line_130" spellcheck="true" contenteditable="true">
-						
-							or androit Au frain, se tu m'i oses prandre
-						
-					</li><li data-bbox="278, 1770, 1141, 1809" data-placeholder="Enter text for line 131" id="line_131" spellcheck="true" contenteditable="true">
-						
-							RCarr. 86O7. De totes parz au frain le
-						
-					</li><li data-bbox="273, 1818, 1139, 1858" data-placeholder="Enter text for line 132" id="line_132" spellcheck="true" contenteditable="true">
-						
-							prindrent, eb. 434. Floire a le main prist,
-						
-					</li><li data-bbox="218, 1866, 1141, 1905" data-placeholder="Enter text for line 133" id="line_133" spellcheck="true" contenteditable="true">
-						
-							33 I. u. E. 3IIO. io. : prendre a arole
-						
-					</li><li data-bbox="275, 1915, 742, 1953" data-placeholder="Enter text for line 134" id="line_134" spellcheck="true" contenteditable="true">
-						
-							beim Vort, . prendre.
-						
-					</li><li data-bbox="341, 1962, 1141, 2001" data-placeholder="Enter text for line 135" id="line_135" spellcheck="true" contenteditable="true">
-						
-							ubertr. anhaften, ingen an : mult se
-						
-					</li><li data-bbox="275, 2011, 1140, 2050" data-placeholder="Enter text for line 136" id="line_136" spellcheck="true" contenteditable="true">
-						
-							tint a pou que il ne furent tuit mort ou
-						
-					</li><li data-bbox="275, 2058, 1142, 2099" data-placeholder="Enter text for line 137" id="line_137" spellcheck="true" contenteditable="true">
-						
-							pris, Ve. 2I6. Ie l. Ii prls cst a emblcr
-						
-					</li><li data-bbox="218, 2107, 1095, 2144" data-placeholder="Enter text for line 138" id="line_138" spellcheck="true" contenteditable="true">
-						
-							1 u a teu felonie, S om. I IO3. e. O0.
-						
-					</li><li data-bbox="341, 2154, 1139, 2192" data-placeholder="Enter text for line 139" id="line_139" spellcheck="true" contenteditable="true">
-						
-							Orf, an dem etuv. efestigt, gehangt u. dgl.
-						
-					</li><li data-bbox="276, 2202, 1140, 2241" data-placeholder="Enter text for line 140" id="line_140" spellcheck="true" contenteditable="true">
-						
-							vird: Qu'll ne fust mis as furches u a de-
-						
-					</li><li data-bbox="277, 2251, 760, 2288" data-placeholder="Enter text for line 141" id="line_141" spellcheck="true" contenteditable="true">
-						
-							structiun, Vou I 368.
-						
-					</li><li data-bbox="343, 2298, 1139, 2334" data-placeholder="Enter text for line 142" id="line_142" spellcheck="true" contenteditable="true">
-						
-							a ceval: Ont a cheval nis le soudant,
-						
-					</li><li data-bbox="218, 2347, 719, 2379" data-placeholder="Enter text for line 143" id="line_143" spellcheck="true" contenteditable="true">
-						
-							43̓ Ric. 40. s. cheval.
-						
-					</li><li data-bbox="342, 2394, 1138, 2433" data-placeholder="Enter text for line 144" id="line_144" spellcheck="true" contenteditable="true">
-						
-							a pié auf den eignen Fuen stehend
-						
-					</li><li data-bbox="277, 2442, 1142, 2481" data-placeholder="Enter text for line 145" id="line_145" spellcheck="true" contenteditable="true">
-						
-							C. lgon 424. et firent bvataille de lor
-						
-					</li><li data-bbox="275, 2490, 1139, 2529" data-placeholder="Enter text for line 146" id="line_146" spellcheck="true" contenteditable="true">
-						
-							chevaliers a plé. . qui n'avoicnt nmais nul
-						
-					</li><li data-bbox="276, 2539, 806, 2577" data-placeholder="Enter text for line 147" id="line_147" spellcheck="true" contenteditable="true">
-						
-							cheval. Vle. I8. s. pie.
-						
-					</li><li data-bbox="1200, 1672, 2057, 1710" data-placeholder="Enter text for line 148" id="line_148" spellcheck="true" contenteditable="true">
-						
-							tote la terre de la entor a une jorncc ou
-						
-					</li><li data-bbox="1200, 1721, 2057, 1758" data-placeholder="Enter text for line 149" id="line_149" spellcheck="true" contenteditable="true">
-						
-							a deus, eb. 279. De Pome fu a trois jornees,
-						
-					</li><li data-bbox="1203, 1769, 2056, 1806" data-placeholder="Enter text for line 150" id="line_150" spellcheck="true" contenteditable="true">
-						
-							Veon II 2, 633. A trels liues de urs,
-						
-					</li><li data-bbox="1200, 1816, 2057, 1848" data-placeholder="Enter text for line 151" id="line_151" spellcheck="true" contenteditable="true">
-						
-							S Tom. 1352. a une forest veue A mains
-						
-					</li><li data-bbox="1201, 1864, 2108, 1902" data-placeholder="Enter text for line 152" id="line_152" spellcheck="true" contenteditable="true">
-						
-							de lut c'uns ars ne tue, Veng. ag. 386. 33
-						
-					</li><li data-bbox="1200, 1913, 2058, 1951" data-placeholder="Enter text for line 153" id="line_153" spellcheck="true" contenteditable="true">
-						
-							les maisons n'estoient pas l.'une lez l'autre
-						
-					</li><li data-bbox="1201, 1962, 2058, 1999" data-placeholder="Enter text for line 154" id="line_154" spellcheck="true" contenteditable="true">
-						
-							a quatre pas, Rute. I 96. a dis lives
-						
-					</li><li data-bbox="1200, 2009, 2057, 2047" data-placeholder="Enter text for line 155" id="line_155" spellcheck="true" contenteditable="true">
-						
-							loins de l'ost, Clarg 66. Pres a sis liues
-						
-					</li><li data-bbox="1200, 2058, 2057, 2093" data-placeholder="Enter text for line 156" id="line_156" spellcheck="true" contenteditable="true">
-						
-							ou a set, CCrr. 4426. Cele nuit se lo-
-						
-					</li><li data-bbox="1201, 2106, 2108, 2142" data-placeholder="Enter text for line 157" id="line_157" spellcheck="true" contenteditable="true">
-						
-							gierent pres a liue et demie, EComm. 830̂. 10
-						
-					</li><li data-bbox="1199, 2153, 2055, 2191" data-placeholder="Enter text for line 158" id="line_158" spellcheck="true" contenteditable="true">
-						
-							gllt. e. I8E4. Et vindrent pres a une lieuc.
-						
-					</li><li data-bbox="1200, 2201, 2056, 2232" data-placeholder="Enter text for line 159" id="line_159" spellcheck="true" contenteditable="true">
-						
-							Escan. 20 367. Et il meismes i venoit Si
-						
-					</li><li data-bbox="1200, 2249, 2055, 2286" data-placeholder="Enter text for line 160" id="line_160" spellcheck="true" contenteditable="true">
-						
-							qu'a deus liues pries estoit, Nous. 27 2.
-						
-					</li><li data-bbox="1200, 2298, 2056, 2336" data-placeholder="Enter text for line 161" id="line_161" spellcheck="true" contenteditable="true">
-						
-							A une lieve pres font levur nef arriver,
-						
-					</li><li data-bbox="1203, 2346, 2107, 2376" data-placeholder="Enter text for line 162" id="line_162" spellcheck="true" contenteditable="true">
-						
-							ESet̂. V 192. ebenso Bast. 433. dont il a͂́
-						
-					</li><li data-bbox="1202, 2393, 2057, 2432" data-placeholder="Enter text for line 163" id="line_163" spellcheck="true" contenteditable="true">
-						
-							est parlé cy dessus a deux feuillets pr̀s,
-						
-					</li><li data-bbox="1203, 2442, 2056, 2479" data-placeholder="Enter text for line 164" id="line_164" spellcheck="true" contenteditable="true">
-						
-							t́nag. I I4I. A huit liues pries de la mer,
-						
-					</li><li data-bbox="1200, 2490, 2057, 2527" data-placeholder="Enter text for line 165" id="line_165" spellcheck="true" contenteditable="true">
-						
-							Eust. Noine . au giet d'une fonde Arri-
-						
-					</li><li data-bbox="1168, 2533, 2057, 2589" data-placeholder="Enter text for line 166" id="line_166" spellcheck="true" contenteditable="true">
-						
-							verent pres de la tor. er. 13α. quant
-						
-					</li><li data-bbox="219, 2586, 2108, 2629" data-placeholder="Enter text for line 167" id="line_167" spellcheck="true" contenteditable="true">
-						
-							30 a genoilt : Adonc se mist la bonc fame i il vint a une live pres de nos cns, Clarp 66. 30
-						
-					</li><li data-bbox="276, 2629, 1439, 2682" data-placeholder="Enter text for line 168" id="line_168" spellcheck="true" contenteditable="true">
-						
-							A nuz genouz et a nuz coutes, ute. II  4. . s. auch pres.
-						
-					</li><li data-bbox="1168, 2682, 2056, 2718" data-placeholder="Enter text for line 169" id="line_169" spellcheck="true" contenteditable="true">
-						
-							   le  lcx, croste a costc, rcs  res, errc a
-						
-					</li><li data-bbox="274, 2685, 441, 2721" data-placeholder="Enter text for line 170" id="line_170" spellcheck="true" contenteditable="true">
-						
-							s. genoi.
-						
-					</li></ul></div>
+							fassen, haltan an, bei: Tenir me porras</li><li data-bbox="276, 1722, 1141, 1761" data-placeholder="Enter text for line 130" id="line_130" spellcheck="true" class="" contenteditable="true"><br></li><li data-bbox="278, 1770, 1141, 1809" data-placeholder="Enter text for line 131" id="line_131" spellcheck="true" class="" contenteditable="true"><br></li><li data-bbox="273, 1818, 1139, 1858" data-placeholder="Enter text for line 132" id="line_132" spellcheck="true" class="" contenteditable="true"><br></li><li data-bbox="218, 1866, 1141, 1905" data-placeholder="Enter text for line 133" id="line_133" spellcheck="true" class="" contenteditable="true"><br></li><li data-bbox="275, 1915, 742, 1953" data-placeholder="Enter text for line 134" id="line_134" spellcheck="true" class="" contenteditable="true"><br></li><li data-bbox="341, 1962, 1141, 2001" data-placeholder="Enter text for line 135" id="line_135" spellcheck="true" class="" contenteditable="true"><br></li><li data-bbox="275, 2011, 1140, 2050" data-placeholder="Enter text for line 136" id="line_136" spellcheck="true" class="" contenteditable="true"><br></li><li data-bbox="275, 2058, 1142, 2099" data-placeholder="Enter text for line 137" id="line_137" spellcheck="true" class="" contenteditable="true"><br></li><li data-bbox="218, 2107, 1095, 2144" data-placeholder="Enter text for line 138" id="line_138" spellcheck="true" class="" contenteditable="true"><br></li><li data-bbox="341, 2154, 1139, 2192" data-placeholder="Enter text for line 139" id="line_139" spellcheck="true" class="" contenteditable="true"><br></li><li data-bbox="276, 2202, 1140, 2241" data-placeholder="Enter text for line 140" id="line_140" spellcheck="true" class="" contenteditable="true"><br></li><li data-bbox="277, 2251, 760, 2288" data-placeholder="Enter text for line 141" id="line_141" spellcheck="true" class="" contenteditable="true"><br></li><li data-bbox="343, 2298, 1139, 2334" data-placeholder="Enter text for line 142" id="line_142" spellcheck="true" class="" contenteditable="true"><br></li><li data-bbox="218, 2347, 719, 2379" data-placeholder="Enter text for line 143" id="line_143" spellcheck="true" class="" contenteditable="true"><br></li><li data-bbox="342, 2394, 1138, 2433" data-placeholder="Enter text for line 144" id="line_144" spellcheck="true" class="" contenteditable="true"><br></li><li data-bbox="277, 2442, 1142, 2481" data-placeholder="Enter text for line 145" id="line_145" spellcheck="true" class="" contenteditable="true"><br></li><li data-bbox="275, 2490, 1139, 2529" data-placeholder="Enter text for line 146" id="line_146" spellcheck="true" class="" contenteditable="true"><br></li><li data-bbox="276, 2539, 806, 2577" data-placeholder="Enter text for line 147" id="line_147" spellcheck="true" class="" contenteditable="true"><br></li><li data-bbox="1200, 1672, 2057, 1710" data-placeholder="Enter text for line 148" id="line_148" spellcheck="true" class="" contenteditable="true"><br></li><li data-bbox="1200, 1721, 2057, 1758" data-placeholder="Enter text for line 149" id="line_149" spellcheck="true" class="" contenteditable="true"><br></li><li data-bbox="1203, 1769, 2056, 1806" data-placeholder="Enter text for line 150" id="line_150" spellcheck="true" class="" contenteditable="true"><br></li><li data-bbox="1200, 1816, 2057, 1848" data-placeholder="Enter text for line 151" id="line_151" spellcheck="true" class="" contenteditable="true"><br></li><li data-bbox="1201, 1864, 2108, 1902" data-placeholder="Enter text for line 152" id="line_152" spellcheck="true" class="" contenteditable="true"><br></li><li data-bbox="1200, 1913, 2058, 1951" data-placeholder="Enter text for line 153" id="line_153" spellcheck="true" class="" contenteditable="true"><br></li><li data-bbox="1201, 1962, 2058, 1999" data-placeholder="Enter text for line 154" id="line_154" spellcheck="true" class="" contenteditable="true"><br></li><li data-bbox="1200, 2009, 2057, 2047" data-placeholder="Enter text for line 155" id="line_155" spellcheck="true" class="" contenteditable="true"><br></li><li data-bbox="1200, 2058, 2057, 2093" data-placeholder="Enter text for line 156" id="line_156" spellcheck="true" class="" contenteditable="true"><br></li><li data-bbox="1201, 2106, 2108, 2142" data-placeholder="Enter text for line 157" id="line_157" spellcheck="true" class="" contenteditable="true"><br></li><li data-bbox="1199, 2153, 2055, 2191" data-placeholder="Enter text for line 158" id="line_158" spellcheck="true" class="" contenteditable="true"><br></li><li data-bbox="1200, 2201, 2056, 2232" data-placeholder="Enter text for line 159" id="line_159" spellcheck="true" contenteditable="true"><br></li><li data-bbox="1200, 2249, 2055, 2286" data-placeholder="Enter text for line 160" id="line_160" spellcheck="true" class="" contenteditable="true"><br></li><li data-bbox="1200, 2298, 2056, 2336" data-placeholder="Enter text for line 161" id="line_161" spellcheck="true" class="" contenteditable="true"><br></li><li data-bbox="1203, 2346, 2107, 2376" data-placeholder="Enter text for line 162" id="line_162" spellcheck="true" class="" contenteditable="true"><br></li><li data-bbox="1202, 2393, 2057, 2432" data-placeholder="Enter text for line 163" id="line_163" spellcheck="true" contenteditable="true"><br></li><li data-bbox="1203, 2442, 2056, 2479" data-placeholder="Enter text for line 164" id="line_164" spellcheck="true" class="" contenteditable="true"><br></li><li data-bbox="1200, 2490, 2057, 2527" data-placeholder="Enter text for line 165" id="line_165" spellcheck="true" class="" contenteditable="true"><br></li><li data-bbox="1168, 2533, 2057, 2589" data-placeholder="Enter text for line 166" id="line_166" spellcheck="true" class="" contenteditable="true"><br></li><li data-bbox="219, 2586, 2108, 2629" data-placeholder="Enter text for line 167" id="line_167" spellcheck="true" class="" contenteditable="true"><br></li><li data-bbox="276, 2629, 1439, 2682" data-placeholder="Enter text for line 168" id="line_168" spellcheck="true" class="" contenteditable="true"><br></li><li data-bbox="1168, 2682, 2056, 2718" data-placeholder="Enter text for line 169" id="line_169" spellcheck="true" contenteditable="true"><br></li><li data-bbox="274, 2685, 441, 2721" data-placeholder="Enter text for line 170" id="line_170" spellcheck="true" class="" contenteditable="true"><br></li></ul></div>
 <div class="column">
 <ul>
 
